@@ -1,0 +1,93 @@
+
+.container-fluid {
+    font-family: 'Satisfy', cursive;
+}
+
+
+.navbar {
+    display: flex;
+    max-width: 100%;
+}
+
+.navbar button {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar button:hover {
+    background-color:teal;
+}
+
+.heading {
+    font-size: 5rem;
+    font-family: 'Satisfy', cursive;
+}
+
+.main {
+    width: 100%;
+    margin: 0;
+
+}
+
+.circleCont{
+    width:100%;
+}
+
+
+.circle {
+    width: 76%;
+    padding-top: 10%;
+    border: 7px solid cadetblue;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.head {
+    font-size: 2rem;
+}
+
+
+.upCol, .downCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upRow, .downRow {
+    height: 50%;
+}
+
+#dailyTotal {
+    font-size: 25rem;
+}
+
+
+/* ------------MEDIA DEVICES------------- */
+@media only screen and (max-width: 600px) {
+   #dailyTotal {
+       font-size: 25vw;
+   }
+    
+   .circle {
+    width: 60%;
+    padding-top: 10%;
+    border: 7px solid cadetblue;
+    border-radius: 50%;
+    display: inline-block;
+}
+}
+
+@media only screen and (min-width: 992px) {
+    #dailyTotal {
+        font-size: 20vw;
+    }
+     
+    .circle {
+     width: 70%;
+     padding-top: 8%;
+     border: 7px solid cadetblue;
+     border-radius: 50%;
+     display: inline-block;
+ }
+
+}
