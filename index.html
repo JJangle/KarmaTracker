@@ -8,87 +8,89 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js.js"></script>
+    <script src="js.js" defer></script>
     <title>Karma Tracker</title>
 </head>
 <body>
 <div class="container-fluid">
     <div class="row navbar">
-        <div class="col-xs-12 col-md-10 heading text-center">Karma Tracker</div>
-        <div class="col-xs-12 col-md-1 text-center"><button class="btn">Register</button></div>
-        <div class="col-xs-12 col-md-1 text-center"><button class="btn">Login</button></div>
+        <div class="col-xs-12 col-md-9 heading text-center">Karma Tracker</div>
+        <div class="col-xs-12 col-md-2 text-center"><button onClick="location.href='login.html'" class="btn regBut">Login</button></div>
+        <div class="col-xs-12 col-md-1 text-center"><button onClick="location.href='register.html'" href="login.html" class="btn logBut">Register</button></div>
     </div>
     <div class="row main">
         <div class="col-md-2 col-xs-12">
             <div class="row upRow">
-                <div class="col-md-12 col-xs-6 upCol">
-                    <i class="far fa-thumbs-up fa-5x"></i>
+                <div class="col-md-12 col-xs-6 upCol" id="thumbUp" >
+                    <button class="text-center" onClick="goodKarma()" id="thumbsUpBut"><i class="far fa-thumbs-up fa-5x"></i></button>
                 </div>
             </div>
             <div class="row downRow">
-                <div class="col-md-12 col-xs-6 downCol">
-                    <i class="far fa-thumbs-down fa-5x"></i>
+                <div class="col-md-12 col-xs-6 downCol" id="thumbDown">
+                    <button onClick="badKarma()" id="thumbsDownBut"><i class="far fa-thumbs-down fa-5x"></i></button>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-xs-12 trackerCol">
             <div class="text-center circleCont">
-                <div class="circle">
-                    <div id="dailyTotal">10</div>
+                <div class="circle" id="circle">
+                    <div id="dailyTotal">0</div>
                 </div>
             </div>
             <div class="row ">
                 <div class="col-md-12 head text-center">Today's Karma</div>
             </div>
         </div>
-        <div class="col-md-4 col-xs-12">
-            <div class="row rightSideRowQ" id="quoteRowBox">
-                <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 upCol">
-                    <div id="quoteBox">Quote:</div>
+        <div class="col-md-4 col-xs-12" id="rightMainCol">
+            <div class="row">
+                <div class="col-xs-12 quoteHeader">
+                    Quote:
                 </div>
             </div>
             <br>
-            <div class="row rightSideRow">
-                <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center downCol">
+            <div class="row rightSideRowQ" >
+                <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 upCol" id="quoteRowBox">
+                    <div id="quoteBox"></div>
+                </div>
+            </div>
+            <div class="row rightSideRow" id="karmaDispCol">
+                <div class="row weekKarmaHeadRow">
+                    <div class="col-xs-12" id="weekKarmaHead">
+                        <div id="weekKarma">Weekly Karma Review:</div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center downCol" id="weekKarmaCol">
                     
                     <div class="row dayRow">
                         <div class="days">
-                            <span>M</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead" id="">M</div>
+                            <div class="dayKarma" id="monday">0</div>
                         </div>
                         <div class="days">
-                            <span>T</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">T</div>
+                            <div class="dayKarma" id="tuesday">0</div>
                         </div>
                         <div class="days">
-                            <span>W</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">W</div>
+                            <div class="dayKarma" id="wedneday">0</div>
                         </div>
                         <div class="days">
-                            <span>T</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">T</div>
+                            <div class="dayKarma" id="thursday">0</div>
                         </div>
                         <div class="days">
-                            <span>F</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">F</div>
+                            <div class="dayKarma" id="friday">0</div>
                         </div>
                         <div class="days">
-                            <span>S</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">S</div>
+                            <div class="dayKarma" id="saturday">0</div>
                         </div>
                         <div class="days">
-                            <span>S</span>
-                            <br>
-                            <span>2</span>
+                            <div class="dayHead">S</div>
+                            <div class="dayKarma" id="sunday">0</div>
                         </div>
                     </div>
                 </div>

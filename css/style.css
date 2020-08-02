@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(231, 231, 231);
+}
 
 .container-fluid {
     font-family: 'Satisfy', cursive;
@@ -26,7 +29,6 @@
 .main {
     width: 100%;
     margin: 0;
-
 }
 
 .circleCont{
@@ -40,6 +42,8 @@
     border: 7px solid cadetblue;
     border-radius: 50%;
     display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.21);
+    background-color: rgba(128, 128, 128, 0.199);
 }
 
 .head {
@@ -56,12 +60,16 @@
     height: 50%;
 }
 
+.quoteHeader {
+    font-size: 1.5rem;
+    margin-left: 25%;
+}
 
 .rightSideRowQ {
     height: 50%;
-    border: 3px solid black;
+    background-color: rgba(0, 128, 128, 0.397);
     margin: 0;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 .rightSideRow {
@@ -71,21 +79,96 @@
 }
 
 .days {
-    border: 4px solid grey;
     border-radius: 50%;
     width: 14%;
+    background-color: rgba(128, 128, 128, 0.199);
+}
+
+.days:hover {
+    background-color: rgba(128, 128, 128, 0.678);
 }
 
 .dayRow {
     height: 50%;
     width: 100%;
     display: flexbox;
-    padding-bottom: 9%;
-    padding-top: 9%;
+    padding-bottom: 15%;
+}
+
+.dayHead {
+    font-size: 1rem;
 }
 
 #dailyTotal {
     font-size: 25rem;
+}
+
+.dayKarma {
+    font-size: 2rem;
+}
+
+#weekKarma {
+    font-size: 2rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#weekKarmaCol {
+    margin-top: -30%;
+}
+
+.weekKarmaHeadRow {
+    width: 100%;
+    display: block;
+}
+
+#thumbDown {
+    margin-left: 50%;
+    margin-bottom: 30%;
+}
+
+#thumbUp {
+    margin-left: 50%;
+    margin-top: 30%;
+}
+
+#thumbsUpBut, #thumbsDownBut {
+    border: none;
+    background-color: transparent;
+    outline: transparent;
+}
+
+
+/* LOGIN PAGE STYLING */
+
+
+.card {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bolder;
+    margin: auto;
+    background-color: rgba(0, 128, 128, 0.685);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardHolderCol {
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.fontCard {
+    font-size: 1.5rem;
+}
+
+.subBut {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.subBut:hover {
+    background-color: teal;
+    color: white;
+    font-weight: bolder;
 }
 
 
@@ -93,6 +176,8 @@
 
 
 /* ------------MEDIA DEVICES------------- */
+
+/* XS */
 @media only screen and (max-width: 600px) {
    #dailyTotal {
        font-size: 25vw;
@@ -106,14 +191,112 @@
     display: inline-block;
 }
 
-.days {
-    border: 2px solid grey;
-    border-radius: 50%;
-    width: 14%;
-}
+    .days {
+        border-radius: 50%;
+        width: 14%;
+        margin-bottom: 10%;
+        margin-top: 5%;
+    }
+
+    .dayHead {
+        font-size: .8rem;
+    }
+
+    .dayKarma {
+        font-size: 1.5rem;
+
+    }
+
+    .upCol {
+        padding-bottom: 10%;
+    }
+
+
+    #quoteBoxRow {
+        margin-top: 30%;
+    }
+    
+    #weekKarma {
+        font-size: 2rem;
+        padding-bottom: 20%;
+    }
+    
+    #weekKarmaCol {
+        padding-bottom: 20%;
+        }
+
+    .quoteHeader {
+        font-size: 1.5rem;
+        margin-left: 42%;
+        margin-top: 5%;
+    }
+
+    #thumbDown {
+        margin: 0;
+    }
+    
+    #thumbUp {
+        margin: 0
+    }
+
 }
 
-@media only screen and (min-width: 992px) {
+
+/* MD */
+@media only screen and (min-width: 760px) and (max-width: 900px) {
+
+
+    .rightSideRowQ {
+        margin-left: -10%;
+        margin-right: 10%;
+    }
+
+   .navbar {
+       margin: 0;
+       padding-left: 9%;
+   }
+
+   #thumbDown {
+       margin-bottom: 60%;
+       margin-left: 40%;
+   }
+
+   #thumbUp {
+       margin-left: 40%;
+       margin-top: 20%;
+
+   }
+
+   .days {
+       margin-bottom: 20%;
+   }
+
+   .dayKarma {
+       font-size: 1.5rem;
+   }
+
+   .dayHead {
+       font-size: .8rem;;
+   }
+
+   
+   #weekKarma {
+       margin: 0;
+   }
+
+/* For Login/Register Page Only */
+
+.headingLog {
+    padding-left: 29%
+}
+
+
+}
+
+
+/* LG */
+
+@media only screen and (min-width: 1000px) {
     #dailyTotal {
         font-size: 20vw;
     }
@@ -125,5 +308,15 @@
      border-radius: 50%;
      display: inline-block;
  }
+
+    .heading {
+        padding-left: 10%;
+    }
+
+/* For Login/Register Page Only */
+
+    .headingLog {
+        padding-left: 27%
+    }
 
 }
