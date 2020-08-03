@@ -143,11 +143,16 @@ body {
 
 
 .card {
+    width: 20rem;
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bolder;
     margin: auto;
     background-color: rgba(0, 128, 128, 0.685);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardReg {
+    width: 50rem;
 }
 
 .cardHolderCol {
@@ -239,6 +244,10 @@ body {
         margin: 0
     }
 
+    .cardReg {
+        width: 20rem;
+    }
+
 }
 
 
@@ -290,6 +299,9 @@ body {
     padding-left: 29%
 }
 
+.cardReg {
+    width: 20rem;
+}
 
 }
 
